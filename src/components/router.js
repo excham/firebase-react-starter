@@ -2,16 +2,15 @@ const React = require('react');
 const ReactRouter = require('react-router');
 const History = require('history');
 
-const Home = require('./routes/index');
-const Page = require('./routes/page');
-const View = require('./routes/view');
-const NotFound = require('./routes/notFound');
+const Home = require('./views/index');
+const Page = require('./views/page');
+const View = require('./views/view');
+const NotFound = require('./views/notFound');
 
 
 class Routes extends React.Component {
   constructor() {
     super()
-    console.log(History);
     this.history = History.createHashHistory()
   }
 

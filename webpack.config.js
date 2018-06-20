@@ -9,6 +9,19 @@ var config = {
   output: {
     path: BUILD_DIR,
     filename: 'app.js'
+  },
+
+  // mode: process.env.MODE || 'production',
+
+  module: {
+    rules: [{
+      test: /\.css$/, // test for .css files
+      use: [{
+        loader: "style-loader" // creates style nodes from JS strings
+      }, {
+        loader: "css-loader" // translates CSS into CommonJS
+      }]
+    }]
   }
 };
 
